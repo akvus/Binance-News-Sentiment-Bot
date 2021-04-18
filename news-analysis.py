@@ -38,6 +38,7 @@ from itertools import count
 # we use it to time our parser execution speed
 from timeit import default_timer as timer
 
+import json
 
 # get binance key and secret from environment variables
 api_key = os.getenv('binance_api_stalkbot_testnet')
@@ -171,7 +172,7 @@ async def get_feed_data(session, feed, headers):
 
     """
     try:
-        async with session.get(feed, headers=headers, timeout=7) as response:
+        async with session.get(feed, headers=headers, timeout=7, verify_ssl=False) as response:
             # define the root for our parsing
             text = await response.text()
             root = ET.fromstring(text)
@@ -347,7 +348,9 @@ def buy():
 
 if __name__ == '__main__':
     print('Press Ctrl-Q to stop the script')
-    for i in count():
-        buy()
-        print(f'Iteration {i}')
-        time.sleep(60 * REPEAT_EVERY)
+    headlines = categorise_headlines()
+    print(json.dumps(headlines, indent=4, sort_keys=True))
+    # for i in count():
+    #     buy()
+    #     print(f'Iteration {i}')
+    #     time.sleep(60 * REPEAT_EVERY)
