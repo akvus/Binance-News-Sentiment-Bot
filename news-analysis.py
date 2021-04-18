@@ -352,6 +352,7 @@ if __name__ == '__main__':
     print('Press Ctrl-Q to stop the script')
     headlines = categorise_headlines()
     print(json.dumps(headlines, indent=4, sort_keys=True))
+    # WARNING: the headlines seem to be mostly outdated, going back weeks and months. I would not recommend to actually use the bot.
     # for i in count():
     #     buy()
     #     print(f'Iteration {i}')
