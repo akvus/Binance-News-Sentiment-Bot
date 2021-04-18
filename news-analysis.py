@@ -64,13 +64,15 @@ client.API_URL = 'https://testnet.binance.vision/api'
 # Use each list to define keywords separated by commas: 'XRP': ['ripple', 'xrp']
 # keywords are case sensitive
 keywords = {
-    'XRP': ['ripple', 'xrp', 'XRP', 'Ripple', 'RIPPLE'],
-    'BTC': ['BTC', 'bitcoin', 'Bitcoin', 'BITCOIN'],
-    'XLM': ['Stellar Lumens', 'XLM'],
-    'BCH': ['Bitcoin Cash', 'BCH'],
+    # 'XRP': ['ripple', 'xrp', 'XRP', 'Ripple', 'RIPPLE'],
+    # 'BTC': ['BTC', 'bitcoin', 'Bitcoin', 'BITCOIN'],
+    # 'XLM': ['Stellar Lumens', 'XLM'],
+    # 'BCH': ['Bitcoin Cash', 'BCH'],
     'ETH': ['ETH', 'Ethereum'],
     'BNB' : ['BNB', 'Binance Coin'],
-    'LTC': ['LTC', 'Litecoin']
+    'LTC': ['LTC', 'Litecoin'],
+    'ADA': ['ADA', 'Cardano'],
+    'DOT': ['DOT', 'Polcadot']
     }
 
 # The Buy amount in the PAIRING symbol, by default USDT
